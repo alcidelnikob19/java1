@@ -17,10 +17,10 @@ public class AccuracyDoubleFloat {
 }
 
     public static double calculateAccuracy(double radius){
-        float temp =volumeBallFloat((float) 6371.2);
-        String str = Float.toString(temp);
-        double str2 = Double.parseDouble(str);
-        double raz=volumeBallDouble(6371.2)-str2;
+        Float temp =volumeBallFloat((float) 6371.2);
+        double str = (double)temp;
+        //double str2 = Double(parseDouble(str));
+        double raz=volumeBallDouble(6371.2)-str;
         return raz;
     }
     public static void main (String[]args){
