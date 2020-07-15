@@ -1,11 +1,22 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
 public class CyclesGoldenFibo {
-    public static boolean containsDigit(int number, int digit){
-        boolean f = (number == digit);
-        System.out.println(f);
-        return f;
+    // Does number contains digit
+    public static boolean containsDigit(int number, int digit) {
+        if (number == 0 && digit == 0) return true;
+        int n = number;
+        while (n > 0) {
+            if (n % 10 == digit) return true;
+            n /= 10;
+        }
+
+        return false;
     }
+
+//        boolean f = (number == digit);
+//        System.out.println(f);
+//        return f;
+
 
     public static int fiboNumber(int n){
         if (n < 2) {
@@ -18,17 +29,23 @@ public class CyclesGoldenFibo {
         }
     }
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        double q = 0;
-       if (b == a) {
-            q = 1.0*c / a;}
-        else if (b == c) {
-                q = 1.0*a / c;}
-        else if (a == c) {
-                    q = 1.0*b / c;}
+        float q = 0;
+       if (a == b)
+            q = (float)a / c;
+        else if (b == c)
+                q = (float)b / a;
+        else if (a == c)
+                    q = (float)a / b;
 
-        return q > 1.0 && q < 2.0;
+        return  q > 1 && q < 2;
         }
 
+
+//    float k = 0;
+//        if (a == b) k = (float)a / c;
+//        else if (b == c) k = (float)b / a;
+//        else if (a == c) k = (float)a / b;
+//        return k > 1.61703f && k < 1.61903f;
   /*       if (b == a) {
             q = 1.0*c / a;
             q > 1.0 && q < 2.0; можно так?
@@ -38,13 +55,13 @@ public class CyclesGoldenFibo {
         else if (a == c) {
             q = 1.0*b / c;}
 
-        return q > 1.0 && q < 2.0;
+        return q > 1.61703 && q < 1.61903;
     }
 */
     public static void main(String[] args) {
-        containsDigit(1,100);
+        containsDigit(1000,100);
         System.out.println(fiboNumber(10));
-        System.out.println(isGoldenTriangle(5,5,9));
+        System.out.println(isGoldenTriangle(55,55,55));
 
     }
 }
