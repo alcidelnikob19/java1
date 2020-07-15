@@ -18,16 +18,29 @@ public class CyclesGoldenFibo {
         }
     }
     public static boolean isGoldenTriangle(int a, int b, int c) {
-        double q;
-        if (b == a) {
-            q = 1.0*c / a;
-            if (q > 1 && q < 2) {
-                return true;
-            }
-        }
-        return false;
-    }
+        double q = 0;
+       if (b == a) {
+            q = 1.0*c / a;}
+        else if (b == c) {
+                q = 1.0*a / c;}
+        else if (a == c) {
+                    q = 1.0*b / c;}
 
+        return q > 1.0 && q < 2.0;
+        }
+
+  /*       if (b == a) {
+            q = 1.0*c / a;
+            q > 1.0 && q < 2.0; можно так?
+        }
+        else if (b == c) {
+            q = 1.0*a / c;}
+        else if (a == c) {
+            q = 1.0*b / c;}
+
+        return q > 1.0 && q < 2.0;
+    }
+*/
     public static void main(String[] args) {
         containsDigit(1,100);
         System.out.println(fiboNumber(10));
