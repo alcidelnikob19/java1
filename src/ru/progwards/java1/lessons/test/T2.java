@@ -11,12 +11,21 @@ public class T2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(addAsStrings(2, 2));
-        System.out.println(addAsStrings(2, 1));
+        /*ystem.out.println(addAsStrings(2, 2));
+       System.out.println(addAsStrings(2, 1));
         System.out.println(addAsStrings(9874, 6518));
-        textGrade(5);
+        textGrade(5);*/
+        System.out.println(factorial(55));
 
     }
+
+    static long factorial(long n){
+        long f = 1;
+        for (long i = n; i > 1; i--)
+            f *= i;
+        return f;
+    }
+
 
     static String textGrade(int grade) {
         if (grade == 0)
@@ -43,7 +52,26 @@ public class T2 {
         }
         return "нет подх знач";
     }
+
+   /* if (grade < 0 || grade > 100) return "не определено";
+        if (grade == 0) return "не оценено";
+        if (grade <= 20) return "очень плохо";
+        if (grade <= 40) return "плохо";
+        if (grade <= 60) return "удовлетворительно";
+        if (grade <= 80) return "хорошо";
+        return "отлично";*/
 }
 
-
-
+//,Оператор	Описание
+//&	Логическое AND (И)
+//&&	Сокращённое AND
+//|	Логическое OR (ИЛИ)
+//||	Сокращённое OR
+//^	Логическое XOR (исключающее OR (ИЛИ))
+//!	Логическое унарное NOT (НЕ)
+//&=	AND с присваиванием
+//|=	OR с присваиванием
+//^=	XOR с присваиванием
+//==	Равно
+//!=	Не равно
+//?:	Тернарный (троичный) условный оператор

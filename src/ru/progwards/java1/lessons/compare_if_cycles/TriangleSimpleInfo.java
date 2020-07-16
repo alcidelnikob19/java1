@@ -31,7 +31,7 @@ public class TriangleSimpleInfo {
 
     }
 
-    public static boolean isEquilateralTriangle(int a, int b, int c) {
+    public static boolean isEquilateralTriangle(int a, int b, int c) {//почему др цвет?
         if (a == (c = b)) {
             System.out.println("True");
 
