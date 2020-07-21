@@ -1,5 +1,5 @@
 package ru.progwards.java1.lessons.test;
-
+/*
 public class Point3D extends Point2D{
     private int z;
 
@@ -27,3 +27,4 @@ public class Point3D extends Point2D{
     }
 
 }
+*/

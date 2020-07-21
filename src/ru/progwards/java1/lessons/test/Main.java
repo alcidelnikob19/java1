@@ -1,25 +1,28 @@
 package ru.progwards.java1.lessons.test;
 
+import ru.progwards.java1.lessons.classes.Animal;
+
 public class Main {
-//    public static void main(String[] args) {
+    //    public static void main(String[] args) {
 //        Calculator c = new Calculator();
 //        System.out.println(c.set(5));
 //
 //    }.
-class Point2D1 {
+    class Point2D1 {
 
-    int x;
-    int y;
+        int x;
+        int y;
 
-    Point2D1(int x, int y) {
-        this.x = x;
-        this.y = y;
+        Point2D1(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        @Override
+        public String toString() {
+            return x + "," + y;
+        }
     }
-    @Override
-    public String toString() {
-        return x + "," + y;
-    }
-}
 
     class Point3D1 extends Point2D1 {
 
@@ -29,6 +32,7 @@ class Point2D1 {
             super(x, y);
             this.z = z;
         }
+
         @Override
         public String toString() {
             return super.toString() + "," + z;
@@ -68,6 +72,11 @@ class Point2D1 {
         }
     }
 }
+   /* public static void main(String[] args) {
+        Animal an= new Animal(2.1);
+        System.out.println(an.weight);
+    }
+}*/
 //    Правильные ответы: Наследование это обретение классом-потомком
 //        свойств класса-родителя, Конструктор не наследуется, как другие
 //        методы, Конструктор потомка всегда вызывает конструктор родителя
