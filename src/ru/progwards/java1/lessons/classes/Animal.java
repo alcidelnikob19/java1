@@ -11,7 +11,7 @@ public class Animal {
     private double weight = 1d; // вес животного
     private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
 
-    public Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
+Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
     }
 
     public Animal(double weight) { // не нужный объект, когда не задан тип животного
