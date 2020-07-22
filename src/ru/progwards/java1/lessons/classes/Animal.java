@@ -11,7 +11,7 @@ public class Animal {
     private double weight = 1d; // вес животного
     private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
 
-    Animal() {
+    public Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
     }
 
     public Animal(double weight) { // не нужный объект, когда не задан тип животного
@@ -57,7 +57,7 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-        Animal animal = new Animal();
+        Animal animal = new Animal(AnimalKind.COW, FoodKind.HAY, weight, foodCoeff);
         System.out.println(animal.toStringFull());
 
     }
