@@ -14,7 +14,7 @@ public class Animal {
     Animal() {
     }
 
-    Animal(double weight) { // не нужный объект, когда не задан тип животного
+    public Animal(double weight) { // не нужный объект, когда не задан тип животного
         this.weight = weight;
     }
 
