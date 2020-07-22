@@ -8,22 +8,20 @@ public class Animal {
 
     private AnimalKind animalKind = AnimalKind.ANIMAL;
     private FoodKind foodKind = FoodKind.UNKNOWN;
-
     private double weight = 1d; // вес животного
-    double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
+    private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
 
     Animal() {
     }
 
     Animal(double weight) { // не нужный объект, когда не задан тип животного
         this.weight = weight;
-    } //сохраняет вес
+    }
 
-    Animal(AnimalKind animalKind, FoodKind food, double weight, double foodCoeff) {
-        this.animalKind = animalKind;
-        this.foodKind = food;
-        this.weight = weight;
-        this.foodCoeff = foodCoeff;
+
+    public double getWeight() {
+
+        return weight;
     }
 
     public AnimalKind getKind() {
@@ -39,9 +37,7 @@ public class Animal {
         return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight();
     }
 
-    public double getWeight() {
-        return weight;
-    }
+
 
     void setFoodCoeff(double foodCoeff) {
         this.foodCoeff = foodCoeff;
