@@ -31,6 +31,7 @@ public class Animal {
         return weight;
     }
 
+
     public AnimalKind getKind() {
         return animalKind;
     }
@@ -42,7 +43,9 @@ public class Animal {
         return foodCoeff;
     }
 
-
+    void setFoodCoeff(double foodCoeff) {
+        this.foodCoeff = foodCoeff;
+    }
     @Override
     public String toString() {
         return "I am " + getKind() + ", eat " + getFoodKind();
@@ -64,7 +67,7 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-        Animal animal = new Animal(401.0);
+        Animal animal = new Animal(457.0);
         System.out.println(animal.toStringFull());
 
     }
