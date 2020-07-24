@@ -10,11 +10,11 @@ public class Cow extends Animal{
     }
 
     Cow(double weight) {
-        super(AnimalKind.COW, FoodKind.HAY, weight);
+        super(AnimalKind.COW, FoodKind.HAY, weight,foodCoeff);
     }
 
-    public Cow(AnimalKind cow, FoodKind hay, int i) {
-    }
+    //public Cow(AnimalKind cow, FoodKind hay, int i) {
+   // }
 
     public static void main(String[] args) {
         Cow cow1 = new Cow( 220);

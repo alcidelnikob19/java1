@@ -12,7 +12,7 @@ public class Duck extends Animal{
     }
 
     public Duck(double weight) { // не нужный объект, когда не задан тип животного
-        super(AnimalKind.COW, FoodKind.HAY, weight);
+        super(AnimalKind.COW, FoodKind.HAY, weight,foodCoeff);
 
     }
     public AnimalKind getKind() {
@@ -22,5 +22,10 @@ public class Duck extends Animal{
         return foodKind;
     }
 
+    public static void main(String[] args) {
+        Duck Duck1 = new Duck( 220);
+        System.out.println(Duck1.toStringFull());
+
+    }
 
 }

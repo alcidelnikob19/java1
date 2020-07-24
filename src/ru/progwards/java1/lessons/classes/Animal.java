@@ -20,7 +20,12 @@ public class Animal {
         this.weight = weight;
     }
 
-
+    Animal(AnimalKind animalKind, FoodKind foodKind, double weight, double foodCoeff) {
+        this.animalKind = animalKind;
+        this.foodKind = foodKind;
+        this.weight = weight;
+        this.foodCoeff = foodCoeff;
+    }
     public double getWeight() {
 
         return weight;
@@ -36,9 +41,7 @@ public class Animal {
     public double getFoodCoeff() {
         return foodCoeff;
     }
-    public double getCoeff() {
-        return foodCoeff;
-    }
+
 
     @Override
     public String toString() {
@@ -50,9 +53,9 @@ public class Animal {
         return "I am " + getKind() + ", eat " + getFoodKind()+" "+calculateFoodWeight();
     }
 
-    void setFoodCoeff(double foodCoeff) {
+    //void setFoodCoeff(double foodCoeff) {
 
-    }
+   // }
 
 
     // рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела
