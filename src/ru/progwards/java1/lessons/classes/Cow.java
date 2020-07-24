@@ -1,25 +1,25 @@
 package ru.progwards.java1.lessons.classes;
 
 public class Cow extends Animal{
-   private AnimalKind animalKind = AnimalKind.COW;
-   private FoodKind foodKind = FoodKind.HAY;
 
-  private double weight = 1d; // вес животного
-    static double foodCoeff = 0.05; // коэффициент веса еды к весу тела животного
 
+    private static double foodCoeff=0.05; // коэффициент веса еды к весу тела животного
     Cow() {
 
-        super(AnimalKind.COW, FoodKind.HAY, weight, foodCoeff);
+        super();
     }
 
     Cow(double weight) {
-        super(AnimalKind.COW, FoodKind.HAY, weight, foodCoeff);
+        super(AnimalKind.COW, FoodKind.HAY, weight);
     }
 
-    public AnimalKind getKind() {
-        return animalKind;
+    public Cow(AnimalKind cow, FoodKind hay, int i) {
     }
-    public FoodKind getFoodKind() {
-        return foodKind;
+
+    public static void main(String[] args) {
+        Cow cow1 = new Cow( 220);
+        System.out.println(cow1.toStringFull());
+
     }
+
 }

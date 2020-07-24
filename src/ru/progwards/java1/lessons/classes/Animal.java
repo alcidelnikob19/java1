@@ -8,10 +8,12 @@ public class Animal {
 
     private AnimalKind animalKind = AnimalKind.ANIMAL;
     private FoodKind foodKind = FoodKind.UNKNOWN;
-    private double weight = 1d; // вес животного
-    private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
+    private double weight ; // вес животного
+    private static double foodCoeff=0.02; // коэффициент веса еды к весу тела животного
 
-Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
+    Animal() {
+    }
+    Animal(AnimalKind cow, FoodKind hay, double weight) {
     }
 
     public Animal(double weight) { // не нужный объект, когда не задан тип животного
@@ -31,6 +33,12 @@ Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
     public FoodKind getFoodKind() {
         return foodKind;
     }
+    public double getFoodCoeff() {
+        return foodCoeff;
+    }
+    public double getCoeff() {
+        return foodCoeff;
+    }
 
     @Override
     public String toString() {
@@ -41,15 +49,11 @@ Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
     public String toStringFull( ){
         return "I am " + getKind() + ", eat " + getFoodKind()+" "+calculateFoodWeight();
     }
+
     void setFoodCoeff(double foodCoeff) {
-        this.foodCoeff = foodCoeff;
+
     }
-    public double getFoodCoeff() {
-        return foodCoeff;
-    }
-    public double getCoeff() {
-        return foodCoeff;
-    }
+
 
     // рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела
     public double calculateFoodWeight() {
@@ -57,7 +61,7 @@ Animal(AnimalKind cow, FoodKind hay, double weight, double foodCoeff) {
     }
 
     public static void main(String[] args) {
-        Animal animal = new Animal(AnimalKind.COW, FoodKind.HAY, weight, foodCoeff);
+        Animal animal = new Animal(220);
         System.out.println(animal.toStringFull());
 
     }
