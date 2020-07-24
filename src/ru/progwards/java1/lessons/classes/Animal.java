@@ -46,10 +46,10 @@ public class Animal {
     void setFoodCoeff(double foodCoeff) {
         this.foodCoeff = foodCoeff;
     }
-    @Override
-    public String toString() {
-        return "I am " + getKind() + ", eat " + getFoodKind();
-    }
+  //  @Override
+    //public String toString() {
+     //   return "I am " + getKind() + ", eat " + getFoodKind();
+  //  }
 
 
     public String toStringFull( ){
