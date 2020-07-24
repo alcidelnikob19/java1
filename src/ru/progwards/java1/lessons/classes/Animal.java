@@ -64,7 +64,7 @@ public class Animal {
     }
 
     public static void main(String[] args) {
-        Animal animal = new Animal(220);
+        Animal animal = new Animal(401.0);
         System.out.println(animal.toStringFull());
 
     }
