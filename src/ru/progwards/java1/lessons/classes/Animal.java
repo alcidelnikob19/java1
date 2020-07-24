@@ -46,10 +46,15 @@ public class Animal {
     void setFoodCoeff(double foodCoeff) {
         this.foodCoeff = foodCoeff;
     }
-  //  @Override
-    //public String toString() {
-     //   return "I am " + getKind() + ", eat " + getFoodKind();
-  //  }
+
+    public double calculateFoodWeight() {
+        return getWeight() * getFoodCoeff();
+    }
+
+ @Override
+   public String toString() {
+      return "I am " + getKind() + ", eat " + getFoodKind();
+ }
 
 
     public String toStringFull( ){
@@ -62,9 +67,7 @@ public class Animal {
 
 
     // рассчитывает необходимый вес еды, по формуле - вес-еды = вес-животного * коэффициент веса тела
-    public double calculateFoodWeight() {
-        return getWeight() * getFoodCoeff();
-    }
+
 
     public static void main(String[] args) {
         Animal animal = new Animal(457.0);
