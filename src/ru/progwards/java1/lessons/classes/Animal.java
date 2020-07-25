@@ -43,7 +43,7 @@ public class Animal {
         return foodCoeff;
     }
 
-    void setFoodCoeff(double foodCoeff) {
+    public void setFoodCoeff(double foodCoeff) {
         this.foodCoeff = foodCoeff;
     }
 
