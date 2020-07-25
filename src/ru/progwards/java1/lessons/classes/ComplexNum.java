@@ -7,6 +7,9 @@ int b;
         this.a = a;
         this.b = b;
     }
+    public ComplexNum newComplexNum(int a, int b) {
+        return new ComplexNum(a, b);
+    }
     public String toString(){
         return a+"+"+b+"i";
     }
