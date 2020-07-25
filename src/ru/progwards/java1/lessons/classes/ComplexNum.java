@@ -13,10 +13,20 @@ int b;
     public String toString(){
         return a+"+"+b+"i";
     }
-    // сложение комплексных чисел по формуле: (a + bi) + (c + di) = (a + c) + (b + d)i
-    public ComplexNum add(ComplexNum num1, ComplexNum num2) {
-        return new ComplexNum(num1.a + num2.a, num1.b + num2.b);
+
+    public ComplexNum add(ComplexNum a, ComplexNum num) {
+        int a1, b1;
+        a1 = this.a + num.a;
+        b1 = this.b + num.b;
+        return new ComplexNum(a1, b1);
+
     }
+
+
+    // сложение комплексных чисел по формуле: (a + bi) + (c + di) = (a + c) + (b + d)i
+   // public ComplexNum add(ComplexNum num1, ComplexNum num2) {
+  //      return new ComplexNum(num1.a + num2.a, num1.b + num2.b);
+  //  }
     // вычитание комплексных чисел по формуле: (a + bi) - (c + di) = (a - c) + (b - d)i
     public ComplexNum sub(ComplexNum num1, ComplexNum num2) {
         return new ComplexNum(num1.a - num2.a, num1.b - num2.b);
