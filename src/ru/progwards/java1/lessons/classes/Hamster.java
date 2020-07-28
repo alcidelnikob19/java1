@@ -4,13 +4,13 @@ public class Hamster extends Animal{
 
 
 
-private static double foodCoeff = 0.03;
+private final static double FOOD_COEF = 0.03;
     Hamster() {
         super();
     }
 
     public  Hamster(double weight) { // не нужный объект, когда не задан тип животного
-        super(AnimalKind.HAMSTER, FoodKind.CORN, 2,foodCoeff);
+        super(AnimalKind.HAMSTER, FoodKind.CORN, weight,FOOD_COEF);
 
     }
     public static void main(String[] args) {

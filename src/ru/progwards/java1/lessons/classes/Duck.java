@@ -5,14 +5,14 @@ public class Duck extends Animal{
     private FoodKind foodKind = FoodKind.CORN;
 
 
-    private static double foodCoeff = 0.04; // коэффициент веса еды к весу тела животного
+    //private static double foodCoeff = 0.04; // коэффициент веса еды к весу тела животного
 
     Duck() {
         super();
     }
 
     public Duck(double weight) { // не нужный объект, когда не задан тип животного
-        super(AnimalKind.COW, FoodKind.HAY, weight,foodCoeff);
+        super(AnimalKind.COW, FoodKind.HAY, weight,0.04);
 
     }
     public AnimalKind getKind() {

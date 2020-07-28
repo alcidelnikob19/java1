@@ -9,7 +9,7 @@ public class Animal {
     private AnimalKind animalKind = AnimalKind.ANIMAL;
     private FoodKind foodKind = FoodKind.UNKNOWN;
     private double weight ; // вес животного
-    private static double foodCoeff=0.02; // коэффициент веса еды к весу тела животного
+    private double foodCoeff=0.02; // коэффициент веса еды к весу тела животного
 
     Animal() {
     }
