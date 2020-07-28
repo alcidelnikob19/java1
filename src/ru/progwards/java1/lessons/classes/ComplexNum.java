@@ -22,7 +22,28 @@ int b;
 
     }
 
+    public ComplexNum sub(ComplexNum num) {
+        int a1, b1;
+        a1 = this.a - num.a;
+        b1 = this.b - num.b;
+        return new ComplexNum(a1, b1);
 
+    }
+    public ComplexNum mul(ComplexNum num) {
+        int a1, b1;
+        a1 = this.a * num.a;
+        b1 = this.b * num.b;
+        return new ComplexNum(a1, b1);
+
+    }
+
+    public ComplexNum div(ComplexNum num) {
+        int a1, b1;
+        a1 = this.a / num.a;
+        b1 = this.b / num.b;
+        return new ComplexNum(a1, b1);
+
+    }
     // test
     public static void main(String[] args) {
         ComplexNum c= new ComplexNum(1, 56);
@@ -30,6 +51,9 @@ int b;
         ComplexNum b = new ComplexNum(1, 1);
         System.out.println(c.toString());
         ComplexNum c5= a.add(b);
+        ComplexNum c6= a.sub(b);
+        ComplexNum c7= a.mul(b);
+        ComplexNum c8= a.div(b);
 
     }
 }
