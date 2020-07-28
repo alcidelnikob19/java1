@@ -20,7 +20,7 @@ public class Animal {
         this.weight = weight;
     }
 
-    Animal(AnimalKind animalKind, FoodKind foodKind, double weight, double foodCoeff) {
+    Animal(AnimalKind animalKind, FoodKind foodKind, double weight,  double  foodCoeff) {
         this.animalKind = animalKind;
         this.foodKind = foodKind;
         this.weight = weight;

@@ -23,18 +23,13 @@ int b;
     }
 
 
-
-
-
-
-
     // test
     public static void main(String[] args) {
         ComplexNum c= new ComplexNum(1, 56);
         ComplexNum a = new ComplexNum(2, 2);
         ComplexNum b = new ComplexNum(1, 1);
         System.out.println(c.toString());
-
+        ComplexNum c5= a.add(b);
 
     }
 }
