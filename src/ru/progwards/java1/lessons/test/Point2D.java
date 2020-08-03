@@ -8,7 +8,7 @@ public class Point2D {
         this.y = y;
           }
     public String toString() {
-        return x+ "@"+y;
+        return x+ ","+y;
     }
     public static void main(String[] args) {
         Point2D p=new Point2D(5,5);
