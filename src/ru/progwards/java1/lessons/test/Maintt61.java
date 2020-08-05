@@ -1,5 +1,7 @@
 package ru.progwards.java1.lessons.test;
 
+import java.util.Arrays;
+
 /*public class Maintt61 {
     public static int sumArrayItems(int[] a) {
         int s = 0;
@@ -13,39 +15,41 @@ package ru.progwards.java1.lessons.test;
 }
 */
 class Rectangle {
-    private static double a;
-    private static double b;
-
-    //double a;
-    //double b;
+    private double a;
+    private double b;
 
     public Rectangle(double a, double b) {
         this.a = a;
         this.b = b;
     }
 
-    public static double area() {
+    public double area() {
 
-        return a * b;
+        return a*b;
     }
 
-
-
-    Rectangle anRectangle(double a, double b) {
-
-        return new Rectangle(a, b);
-    }
 
     public int compareTo( Rectangle anRectangle) {
-        double s1 = Rectangle.area();
-        double s2 = anRectangle.area();
-        return s1 >= s2 ? (s1 == s2 ? 0 : 1) : -1;
-        //return s1>=s2?(s1==s2?0:1):-1;
+        double s1=anRectangle.area();
+        double s2 = area();
+//     if (s2>s1)
+//         return 1;
+        return s2>s1?1:(s1==s2?0:-1);
+//     if (s2 > s1)
+//         return 1;
+//     if (s1==s2)
+//         return 0;
+//     return -1;
+
+        //return Double.compare(s2,s1);
+
 
     }
 
 
     public static void main(String[] args) {
+        Rectangle rect1 = new Rectangle(2,3);
+        System.out.println(rect1.area());
         System.out.println(new Rectangle(2,3).compareTo(new Rectangle(3, 2)));
         System.out.println(new Rectangle(33,30).compareTo(new Rectangle(2, 20)));
 
