@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons.classes;
+package ru.progwards.java1.lessons.interfaces;
 
 
 public class Animal {
@@ -20,7 +20,7 @@ public class Animal {
         this.weight = weight;
     }
 
-    Animal(AnimalKind animalKind, FoodKind foodKind, double weight,  double  foodCoeff) {
+    Animal(AnimalKind animalKind, FoodKind foodKind, double weight, double  foodCoeff) {
         this.animalKind = animalKind;
         this.foodKind = foodKind;
         this.weight = weight;
@@ -62,6 +62,8 @@ public class Animal {
     }
 
 
+
+
     public static void main(String[] args) {
         Animal animal = new Animal(457.0);
         System.out.println(animal.toStringFull());
@@ -69,4 +71,5 @@ public class Animal {
     }
 
 }
+
 
