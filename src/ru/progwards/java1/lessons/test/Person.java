@@ -1,6 +1,4 @@
-
-
-
+package ru.progwards.java1.lessons.test;
 /*
 Создайте класс Person, содержащий
 приватную переменную String name;
@@ -11,7 +9,7 @@
 и устанавливающий значения переменным name и age из соответствующих параметров;
 публичные функции String getName(), int getAge(), String getCountry(), возвращающие значения
 соответствующих переменных*/
-/*
+
 class Person {
     private String name;
     private int age;
@@ -28,5 +26,15 @@ class Person {
     public String getName() {return name;}
     public int getAge() {return age;}
     public String getCountry() {return country;}
+
+    public static class Child1{//вложенный
+        public String hello(){
+            return  ("привет");
+        }
+    }
+    public static class Child2{//внутренний класс
+        public String hello(){
+            return  ("servus");
+        }
+    }
 }
-*/

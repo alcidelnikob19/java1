@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.classes;
 
-public class Duck extends Animal{
+public class Duck extends Animal.Animal {
     private AnimalKind animalKind = AnimalKind.DUCK;
     private FoodKind foodKind = FoodKind.CORN;
 

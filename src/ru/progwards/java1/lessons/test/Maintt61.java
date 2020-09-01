@@ -13,7 +13,7 @@ import java.util.Arrays;
 
     }
 }
-*/
+
 class Rectangle {
     private double a;
     private double b;
@@ -24,27 +24,15 @@ class Rectangle {
     }
 
     public double area() {
-
         return a*b;
     }
 
 
-    public int compareTo( Rectangle anRectangle) {
-        double s1=anRectangle.area();
-        double s2 = area();
-//     if (s2>s1)
-//         return 1;
-        return s2>s1?1:(s1==s2?0:-1);
-//     if (s2 > s1)
-//         return 1;
-//     if (s1==s2)
-//         return 0;
-//     return -1;
-
-        //return Double.compare(s2,s1);
-
-
-    }
+//    public int compareTo( Rectangle anRectangle) {
+//        double s1=anRectangle.area();
+//        double s2 = area();
+//        return s2>s1?1:(s1==s2?0:-1);
+//    }
 
 
     public static void main(String[] args) {
@@ -57,3 +45,4 @@ class Rectangle {
 
 
 }
+*/
