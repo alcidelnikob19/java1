@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.classes;
 
-public class Cow extends Animal.Animal {
+public class Cow extends Animal {
 
 
  // коэффициент веса еды к весу тела животного
