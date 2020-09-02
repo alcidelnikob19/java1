@@ -62,14 +62,20 @@ public class Animal {
     }
 
 
-
-
     public static void main(String[] args) {
         Animal animal = new Animal(457.0);
         System.out.println(animal.toStringFull());
 
     }
-
+    public double getFood1kgPrice() {
+        switch (foodKind) {
+            case HAY:
+                return 20;
+            case CORN:
+                return 50;
+            default:
+                return 0;
+        }
+    }
 }
-
 
