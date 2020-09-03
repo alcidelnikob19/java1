@@ -76,6 +76,10 @@ public class Animal {
             default:
                 return 0;
         }
+
+    }
+    public double getFoodPrice(){
+        return calculateFoodWeight() * getFood1kgPrice();
     }
 }
 
