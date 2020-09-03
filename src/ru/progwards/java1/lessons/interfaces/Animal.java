@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
 
-public class Animal {
+public class Animal implements FoodCompare{
 
     static enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK}
     static enum FoodKind {UNKNOWN, HAY, CORN}
@@ -76,6 +76,11 @@ public class Animal {
             default:
                 return 0;
         }
+
+    }
+    @Override
+    public int compareFoodPrice(Animal animal) {
+        return Double.compare(this.getFoodPrice(),animal.getFoodPrice());
 
     }
     public double getFoodPrice(){
