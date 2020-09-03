@@ -1,4 +1,4 @@
-package ru.progwards.java1.lessons.compare_if_cycles;
+package ru.progwards.java1.lessons.interfaces;
 
 public class CyclesGoldenFibo {
     // Does number contains digit
@@ -12,11 +12,6 @@ public class CyclesGoldenFibo {
 
         return false;
     }
-
-//        boolean f = (number == digit);
-//        System.out.println(f);
-//        return f;
-
 
     public static int fiboNumber(int n){
         if (n < 2) {
