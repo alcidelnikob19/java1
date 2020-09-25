@@ -13,10 +13,6 @@ public class CyclesGoldenFibo {
         return false;
     }
 
-//        boolean f = (number == digit);
-//        System.out.println(f);
-//        return f;
-
 
     public static int fiboNumber(int n){
         if (n < 2) {
@@ -39,11 +35,14 @@ public class CyclesGoldenFibo {
 
         return  q > 1 && q < 2;
         }
+    public static class CacheInfo{
 
+    }
     public static void main(String[] args) {
         containsDigit(1000,100);//не выводит в кс
         System.out.println(fiboNumber(10));
         System.out.println(isGoldenTriangle(55,55,55));
 
     }
+
 }
