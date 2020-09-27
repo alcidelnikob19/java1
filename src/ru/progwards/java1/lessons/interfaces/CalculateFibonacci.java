@@ -42,7 +42,12 @@ public  class  CalculateFibonacci {
     CalculateFibonacci () {
         lastFibo =  new  CacheInfo ();
     }
-
+    public static CacheInfo getLastFibo(){
+        return lastFibo;
+    }
+    public static void clearLastFibo(){
+        lastFibo=null;
+    }
     public static void main(String[] args) {
         System.out.println(fiboNumber(10));
     }
