@@ -1,17 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
-public class CalculateFibonacci {
-    // Does number contains digit
-    public static int fiboNumber(int n){
-        if (n < 2) {
+public  class  CalculateFibonacci {
 
-            return n;
-
-        } else {
-
-            return (fiboNumber(n-1)+fiboNumber(n-2));
-        }
-    }
     static  CacheInfo lastFibo;
     static {
         lastFibo =  new  CacheInfo ();
@@ -26,15 +16,34 @@ public class CalculateFibonacci {
             n =  - 1 ;
         }
 
+        CacheInfo ( int  n , int  fibo ) {
+            this.n= n;
+            this.fibo = fibo;
+        }
     }
+
+    // число Фибоначчи
+    public  static  int  fiboNumber ( int  n ) {
+        if (lastFibo . n == n) return lastFibo.fibo;
+        int f1 =  0 ;
+        int f2 =  1 ;
+        int t;
+        int i =  1 ;
+        while (i ++  < n) {
+            t = f2;
+            f2 = f2 + f1;
+            f1 = t;
+        }
+        lastFibo.n = n;
+        lastFibo . fibo = f2;
+        return f2;
+    }
+
     CalculateFibonacci () {
         lastFibo =  new  CacheInfo ();
     }
 
     public static void main(String[] args) {
-        
-        System.out.println(fiboNumber(1));
-
-
+        System.out.println(fiboNumber(10));
     }
 }
