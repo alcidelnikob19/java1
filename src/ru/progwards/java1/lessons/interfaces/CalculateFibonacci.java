@@ -5,6 +5,7 @@ public  class  CalculateFibonacci {
     static  CacheInfo lastFibo;
     static {
         lastFibo =  new  CacheInfo ();
+
     }
 
     static  class  CacheInfo {
@@ -27,12 +28,20 @@ public  class  CalculateFibonacci {
         if (lastFibo . n == n) return lastFibo.fibo;
         int f1 =  0 ;
         int f2 =  1 ;
-        int t;
+        int f;
+
         int i =  1 ;
+        System.out.println("n= "+n);
         while (i ++  < n) {
-            t = f2;
+            System.out.println("i= "+i);
+            f = f2;
+            System.out.println("f= f2 "+f2);
+
             f2 = f2 + f1;
-            f1 = t;
+            System.out.println("f2= f2 + f1 "+f2+" + "+f+" : " +f2);
+            f1 = f;
+            System.out.println("f1= f" +f+" : " +f1);
+
         }
         lastFibo.n = n;
         lastFibo . fibo = f2;
@@ -49,6 +58,8 @@ public  class  CalculateFibonacci {
         lastFibo=null;
     }
     public static void main(String[] args) {
-        System.out.println(fiboNumber(10));
+        System.out.println(fiboNumber(11));
+        System.out.println("lf "+lastFibo);
+
     }
 }
