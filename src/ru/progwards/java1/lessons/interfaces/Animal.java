@@ -1,23 +1,21 @@
 package ru.progwards.java1.lessons.interfaces;
 
 
-public class Animal implements FoodCompare, CompareWeight{
+public class Animal implements FoodCompare, CompareWeight {
 
-    @Override
-    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        return null;
-    }
 
     static enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK}
+
     static enum FoodKind {UNKNOWN, HAY, CORN}
 
     private AnimalKind animalKind = AnimalKind.ANIMAL;
     private FoodKind foodKind = FoodKind.UNKNOWN;
-    private double weight ; // вес животного
-    private double foodCoeff=0.02; // коэффициент веса еды к весу тела животного
+    private double weight; // вес животного
+    private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
 
     Animal() {
     }
+
     Animal(AnimalKind cow, FoodKind hay, double weight) {
     }
 
@@ -25,12 +23,13 @@ public class Animal implements FoodCompare, CompareWeight{
         this.weight = weight;
     }
 
-    Animal(AnimalKind animalKind, FoodKind foodKind, double weight, double  foodCoeff) {
+    Animal(AnimalKind animalKind, FoodKind foodKind, double weight, double foodCoeff) {
         this.animalKind = animalKind;
         this.foodKind = foodKind;
         this.weight = weight;
         this.foodCoeff = foodCoeff;
     }
+
     public double getWeight() {
 
         return weight;
@@ -44,6 +43,7 @@ public class Animal implements FoodCompare, CompareWeight{
     public FoodKind getFoodKind() {
         return foodKind;
     }
+
     public double getFoodCoeff() {
         return foodCoeff;
     }
@@ -56,14 +56,14 @@ public class Animal implements FoodCompare, CompareWeight{
         return getWeight() * getFoodCoeff();
     }
 
- @Override
-   public String toString() {
-      return "I am " + getKind() + ", eat " + getFoodKind();
- }
+    @Override
+    public String toString() {
+        return "I am " + getKind() + ", eat " + getFoodKind();
+    }
 
 
-    public String toStringFull( ){
-        return "I am " + getKind() + ", eat " + getFoodKind()+" "+calculateFoodWeight();
+    public String toStringFull() {
+        return "I am " + getKind() + ", eat " + getFoodKind() + " " + calculateFoodWeight();
     }
 
 
@@ -72,6 +72,7 @@ public class Animal implements FoodCompare, CompareWeight{
         System.out.println(animal.toStringFull());
 
     }
+
     public double getFood1kgPrice() {
         switch (foodKind) {
             case HAY:
@@ -83,41 +84,30 @@ public class Animal implements FoodCompare, CompareWeight{
         }
 
     }
+
     @Override
     public int compareFoodPrice(Animal animal) {
-        return Double.compare(this.getFoodPrice(),animal.getFoodPrice());
+        return Double.compare(this.getFoodPrice(), animal.getFoodPrice());
 
     }
 
-    public double getFoodPrice(){
+    public double getFoodPrice() {
         return calculateFoodWeight() * getFood1kgPrice();
     }
 
-
-//    public CompareResult CompareResult(CompareWeight smthHasWeigt) {
-//        if (this.weight < smthHasWeigt) return CompareResult.LESS;
-//        if (this.weight == smthHasWeigt) return CompareResult.EQUAL;
-//        if (this.weight > smthHasWeigt) return CompareResult.GREATER;
-//
-//
-//    }
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        return null;
     }
 
+    public CompareResult CompareResult(CompareWeight smthHasWeigt) {
+        Animal animal = (Animal) smthHasWeigt;
 
+        if (this.weight < animal.weight) return CompareResult.LESS;
+        if (this.weight == animal.weight) return CompareResult.EQUAL;
+      return CompareResult.GREATER;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 }
 
