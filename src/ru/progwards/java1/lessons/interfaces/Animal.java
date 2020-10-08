@@ -101,11 +101,11 @@ public class Animal implements FoodCompare, CompareWeight {
     }
 
     public CompareResult CompareResult(CompareWeight smthHasWeigt) {
-        Animal animal = (Animal) smthHasWeigt;
+        Animal animal = (Animal)smthHasWeigt;
 
         if (this.weight < animal.weight) return CompareResult.LESS;
         if (this.weight == animal.weight) return CompareResult.EQUAL;
-      return CompareResult.GREATER;
+        return CompareResult.GREATER;
 
     }
 
