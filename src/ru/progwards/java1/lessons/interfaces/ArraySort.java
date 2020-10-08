@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.interfaces;
 
 
-public  class  ArraySort {
+public  class  ArraySort implements CompareWeight  {
 
     // public static void sort (Comparable [] a) {
     public  static  void  sort ( Comparable < Animal > [] a ) {
@@ -22,4 +22,8 @@ public  class  ArraySort {
     public  static  void  main ( String [] args ) {
     }
 
+    @Override
+    public CompareResult compareWeight(CompareWeight smthHasWeigt) {
+        return null;
+    }
 }
