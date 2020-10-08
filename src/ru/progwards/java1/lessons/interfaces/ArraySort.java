@@ -1,32 +1,25 @@
 package ru.progwards.java1.lessons.interfaces;
 
 
-import java.util.Arrays;
+public  class  ArraySort {
 
-public class ArraySort {
-
-    public static void sort(int[] a){
-
-        int indexMin;
-        for (int index = 0; index < a.length ; index++){
-            indexMin = index;
-            for (int indexToScan = index; indexToScan < a.length; indexToScan++) {
-                if (a[indexMin] > a[indexToScan]) {
-                    indexMin = indexToScan;
+    // public static void sort (Comparable [] a) {
+    public  static  void  sort ( Comparable < Animal > [] a ) {
+        Comparable tmpValue;
+        // найдем в остатках максимальный
+        for ( int i = a . length -  1 ; i >=  0 ; i -- )
+            for (int j = 0; j < i; j++) {
+                // if (a [j] .compareTo (a [i])> 0) {
+                if (a[j].compareTo((Animal) a[i]) > 0) {
+                    tmpValue = a[i];
+                    a[i] = a[j];
+                    a[j] = tmpValue;
                 }
             }
-            int temp = a[index];
-            a[index] = a[indexMin];
-            a[indexMin]=temp;
-
-        }
-        System.out.println(Arrays.toString(a));
     }
-    public static void main(String[] args) {
-        int[] unsortedArray = {2,1,45,7};
 
-        System.out.println(Arrays.toString(unsortedArray));
 
-        sort(unsortedArray);
+    public  static  void  main ( String [] args ) {
     }
+
 }
