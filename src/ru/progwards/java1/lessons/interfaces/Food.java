@@ -5,7 +5,10 @@ public class Food implements CompareWeight{
     public int getWeight(int weight){
         return  weight;
     }
+    public double getWeight() {
 
+        return weight;
+    }
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
         return null;
