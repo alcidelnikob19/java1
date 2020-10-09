@@ -4,5 +4,5 @@ public interface CompareWeight {
     public enum CompareResult{LESS, EQUAL, GREATER};
     public CompareResult compareWeight(CompareWeight smthHasWeigt);
 
-    public static void sort(CompareWeight[] a)
+//    public static void sort(CompareWeight[] a);
 }
