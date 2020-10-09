@@ -4,7 +4,7 @@ public class Hamster extends Animal {
 
 
     public  Hamster(double weight) { // не нужный объект, когда не задан тип животного
-        super(AnimalKind.HAMSTER, FoodKind.HAY, weight,0.2);
+        super(AnimalKind.HAMSTER, FoodKind.UNKNOWN, weight,0.2);
 
     }
     public static void main(String[] args) {
