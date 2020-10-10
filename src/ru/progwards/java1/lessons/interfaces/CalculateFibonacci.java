@@ -54,7 +54,8 @@ public  class  CalculateFibonacci {
         return lastFibo;
     }
     public static void clearLastFibo(){
-        return;
+       lastFibo=null;
+
     }
 
     public static void main(String[] args) {
