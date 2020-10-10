@@ -1,6 +1,8 @@
 package ru.progwards.java1.lessons.interfaces;
 
 
+import java.util.Objects;
+
 public class Animal implements FoodCompare, CompareWeight {
 
 
@@ -14,6 +16,19 @@ public class Animal implements FoodCompare, CompareWeight {
     private double foodCoeff = 0.02; // коэффициент веса еды к весу тела животного
 
     Animal() {
+    }
+
+    @Override
+    public boolean equals(Object anObject) {
+        if (this == anObject) return true;
+        if (anObject == null || getClass() != anObject.getClass()) return false;
+        Animal animal = (Animal) anObject;
+        return Double.compare(animal.weight, weight) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(weight);
     }
 
     Animal(AnimalKind cow, FoodKind hay, double weight) {
