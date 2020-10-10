@@ -86,16 +86,17 @@ public class Animal implements FoodCompare, CompareWeight {
         Animal animal = new Animal(457.0);
         System.out.println(animal.toStringFull());
 
+
     }
 
     public double getFood1kgPrice() {
         switch (foodKind) {
             case HAY:
-                return 20.0;
+                return 20;
             case CORN:
-                return 50.0;
+                return 50;
             default:
-                return 0.0;
+                return 0;
         }
 
     }

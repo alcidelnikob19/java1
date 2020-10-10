@@ -29,7 +29,7 @@ public class Food implements CompareWeight {
     public static void main(String[] args) {
 
         Food food1 = new Food(40);
-        Food food2 = new Food(50);
+        Food food2 = new Food(40);
         System.out.println(food1.CompareResult(food2));
 
     }
