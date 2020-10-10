@@ -82,12 +82,7 @@ public class Animal implements FoodCompare, CompareWeight {
     }
 
 
-    public static void main(String[] args) {
-        Animal animal = new Animal(457.0);
-        System.out.println(animal.toStringFull());
 
-
-    }
 
     public double getFood1kgPrice() {
         switch (foodKind) {
@@ -113,7 +108,11 @@ public class Animal implements FoodCompare, CompareWeight {
 
     @Override
     public CompareResult compareWeight(CompareWeight smthHasWeigt) {
-        return null;
+        Animal animal = (Animal)smthHasWeigt;
+
+        if (this.weight < animal.weight) return CompareResult.LESS;
+        if (this.weight == animal.weight) return CompareResult.EQUAL;
+        return CompareResult.GREATER;
     }
 
     public CompareResult CompareResult(CompareWeight smthHasWeigt) {
@@ -124,6 +123,14 @@ public class Animal implements FoodCompare, CompareWeight {
         return CompareResult.GREATER;
 
     }
+    public static void main(String[] args) {
+        Animal animal = new Animal(300.0);
+        System.out.println(animal.toStringFull());
+        System.out.println(animal.compareWeight(new Cow(300D)));
+
+
+    }
+
 
 }
 
