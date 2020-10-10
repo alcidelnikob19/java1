@@ -5,7 +5,6 @@ public  class  CalculateFibonacci {
     static  CacheInfo lastFibo;
     static {
         lastFibo =  new  CacheInfo ();
-
     }
 
     static  class  CacheInfo {
@@ -17,7 +16,12 @@ public  class  CalculateFibonacci {
             n =  - 1 ;
         }
 
+        CacheInfo ( int  n , int  fibo ) {
+           this. n = n;
+            this . fibo = fibo;
+        }
     }
+
 
     // число Фибоначчи
     public  static  int  fiboNumber ( int  n ) {
