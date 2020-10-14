@@ -8,20 +8,31 @@ public class BigAlgebra {
         return num;
     }
 
-    BigInteger fibonacci(int n) {
-        if (n < 2) {
+   public static BigInteger fibonacci(int n) {
 
-            return BigInteger.valueOf(n);
 
-        } else {
+       BigInteger f1 = BigInteger.valueOf(0);
+       BigInteger f2 = BigInteger.valueOf(1);
+       BigInteger f;
 
-            BigInteger i = fibonacci(n - 2).add(fibonacci(n - 1));
-        }
-        return null;
-    }
+       int i =  1 ;
+
+       while (i ++  < n) {
+
+           f = f2;
+
+           f2 = f2.add(f1);
+
+           f1 = f;
+
+
+       }
+
+      return f2;
+   }
 
     public static void main(String[] args) {
         BigAlgebra b=new BigAlgebra();
-        b.fibonacci(25);
+        System.out.println(b.fibonacci(25));
     }
 }
