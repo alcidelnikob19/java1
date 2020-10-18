@@ -21,11 +21,10 @@ public  class  CalculateFibonacci {
             this . fibo = fibo;
         }
     }
-
-
     // число Фибоначчи
     public  static  int  fiboNumber ( int  n ) {
-        if (lastFibo . n == n) return lastFibo.fibo;
+
+        if (lastFibo !=null &&  lastFibo . n == n) return lastFibo.fibo;
         int f1 =  0 ;
         int f2 =  1 ;
         int f;
@@ -42,6 +41,7 @@ public  class  CalculateFibonacci {
 
 
         }
+//        если дfnull, сделать New CashInfo
         lastFibo.n = n;
         lastFibo . fibo = f2;
         return f2;

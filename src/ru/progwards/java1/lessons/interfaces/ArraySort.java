@@ -30,7 +30,7 @@ public class ArraySort {
         System.out.println(Arrays.toString(a2));
 
         sort(a2);
-
+        System.out.println(Arrays.toString(a2));
     }
 }
 

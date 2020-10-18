@@ -3,6 +3,8 @@ package ru.progwards.java1.lessons.classes;
 
 public class Animal {
 
+
+
     static enum AnimalKind {ANIMAL, COW, HAMSTER, DUCK}
     static enum FoodKind {UNKNOWN, HAY, CORN}
 
@@ -66,6 +68,8 @@ public class Animal {
         Animal animal = new Animal(457.0);
         System.out.println(animal.toStringFull());
 
+        Animal animal1 = new Animal(4517.0);
+        System.out.println(animal1.toStringFull());
     }
 
 }

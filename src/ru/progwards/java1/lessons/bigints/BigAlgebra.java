@@ -3,7 +3,7 @@ package ru.progwards.java1.lessons.bigints;
 import java.math.*;
 
 public class BigAlgebra {
-    BigDecimal fastPow(BigDecimal num, int pow) {
+   public static BigDecimal fastPow(BigDecimal num, int pow) {
 
         return num;
     }
@@ -34,5 +34,8 @@ public class BigAlgebra {
     public static void main(String[] args) {
         BigAlgebra b=new BigAlgebra();
         System.out.println(b.fibonacci(25));
+        b.fastPow(BigDecimal.valueOf(2),43);
+        BigAlgebra.fastPow(BigDecimal.valueOf(2),43);
+        b.fastPow(BigDecimal.valueOf(25),2);
     }
 }
