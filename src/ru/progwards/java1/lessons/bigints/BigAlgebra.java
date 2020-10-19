@@ -4,8 +4,13 @@ import java.math.*;
 
 public class BigAlgebra {
    public static BigDecimal fastPow(BigDecimal num, int pow) {
+       BigDecimal result = BigDecimal.valueOf(1);
+       for (int i=1; i<=pow; i++){
 
-        return num;
+           result = result.multiply(num);
+
+       }
+       return result;
     }
 
    public static BigInteger fibonacci(int n) {
@@ -37,5 +42,6 @@ public class BigAlgebra {
         b.fastPow(BigDecimal.valueOf(2),43);
         BigAlgebra.fastPow(BigDecimal.valueOf(2),43);
         b.fastPow(BigDecimal.valueOf(25),2);
+        System.out.println(b.fastPow(BigDecimal.valueOf(2),43));
     }
 }
