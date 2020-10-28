@@ -1,7 +1,13 @@
 package ru.progwards.java1.lessons.bigints;
 
 public class ByteInteger extends AbsInteger {
-    public ByteInteger(int i) {
-        super();
+    byte b;
+    public ByteInteger(byte b) {
+        this.b=b;
+    }
+
+     @Override
+    protected int toInt() {
+        return this.b;
     }
 }
