@@ -10,4 +10,8 @@ public class ByteInteger extends AbsInteger {
     protected int toInt() {
         return this.b;
     }
+
+    public static void main(String[] args) {
+
+    }
 }

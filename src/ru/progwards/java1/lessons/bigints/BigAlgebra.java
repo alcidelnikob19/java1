@@ -43,5 +43,10 @@ public class BigAlgebra {
         BigAlgebra.fastPow(BigDecimal.valueOf(2),43);
         b.fastPow(BigDecimal.valueOf(25),2);
         System.out.println(b.fastPow(BigDecimal.valueOf(2),43));
+
+
+
+
+
     }
 }
