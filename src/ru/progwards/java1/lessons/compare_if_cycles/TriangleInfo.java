@@ -1,6 +1,6 @@
 package ru.progwards.java1.lessons.compare_if_cycles;
 
-public class TriangleInfo {
+public class  TriangleInfo {
 
     public static boolean isTriangle(int a, int b, int c) {
         boolean f = (a + b > c && a + c > b && b + c > a);

@@ -5,16 +5,17 @@ public class IntInteger extends AbsInteger {
     public IntInteger(int i) {
         this.i=i;
     }
-//
-//    @Override
-//    protected int toInt() {
-//        return 0;
-//    }
-
-
     @Override
     protected int toInt() {
         return this.i;
     }
+
+    @Override
+    public String toString() {
+        return "IntInteger{" +
+                "i=" + i +
+                '}';
+    }
 }
+
 

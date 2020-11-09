@@ -11,4 +11,11 @@ public class ShortInteger extends AbsInteger {
     protected int toInt() {
         return this.s;
     }
+
+    @Override
+    public String toString() {
+        return "ShortInteger{" +
+                "s=" + s +
+                '}';
+    }
 }

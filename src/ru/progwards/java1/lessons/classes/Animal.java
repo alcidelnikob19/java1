@@ -70,6 +70,8 @@ public class Animal {
 
         Animal animal1 = new Animal(4517.0);
         System.out.println(animal1.toStringFull());
+        System.out.println(animal1.calculateFoodWeight());
+
     }
 
 }

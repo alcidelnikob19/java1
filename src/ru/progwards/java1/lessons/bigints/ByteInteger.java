@@ -6,12 +6,15 @@ public class ByteInteger extends AbsInteger {
         this.b=b;
     }
 
-     @Override
+    @Override
     protected int toInt() {
         return this.b;
     }
 
-    public static void main(String[] args) {
-
+    @Override
+    public String toString() {
+        return "ByteInteger{" +
+                "b=" + b +
+                '}';
     }
 }
