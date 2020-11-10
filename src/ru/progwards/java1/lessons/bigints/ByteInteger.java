@@ -13,8 +13,6 @@ public class ByteInteger extends AbsInteger {
 
     @Override
     public String toString() {
-        return "ByteInteger{" +
-                "b=" + b +
-                '}';
+        return String.valueOf(b);
     }
 }

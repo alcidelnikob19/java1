@@ -12,9 +12,7 @@ public class IntInteger extends AbsInteger {
 
     @Override
     public String toString() {
-        return "IntInteger{" +
-                "i=" + i +
-                '}';
+        return String.valueOf(i);
     }
 }
 
