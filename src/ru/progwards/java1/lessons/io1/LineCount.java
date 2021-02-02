@@ -20,7 +20,8 @@ public  class  LineCount {
         try ( FileReader f =  new  FileReader (fileName); Scanner s =  new  Scanner (f)) {
             while (s.hasNextLine ()) {
                 String str = s.nextLine ();
-                if (str.compareTo(searchString) ==  0 ) result ++ ;
+
+                if ( str.isEmpty() ) result ++ ;
             }
         } catch ( FileNotFoundException e) {
             result = resultOnError;
@@ -32,8 +33,8 @@ public  class  LineCount {
 
     public  static  void  main ( String [] args ) {
 
-        System.out.println(calcEmpty ( " java1.txt " ));
-        System.out.println(calcEmpty ( " java2.txt " ));
+        System.out.println(calcEmpty ( "D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\java1.txt" ));
+        System.out.println(calcEmpty ( "D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\java2.txt" ));
     }
 
 }
