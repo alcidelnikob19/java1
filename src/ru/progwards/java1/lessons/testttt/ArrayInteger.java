@@ -1,4 +1,4 @@
-//package ru.progwards.java1.lessons.testttt;
+//package ru.progwards.java1.lessons.test;
 //import java.math.BigInteger;
 //import java.util.Arrays;
 //
