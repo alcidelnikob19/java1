@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.io1;
 
-//import ru.progwards.java1.lessons.arrays.DIntArray;
-import  java.util.*;
+import ru.progwards.java1.lessons.arrays.DIntArray;
+//import  java.util.*;
 import  java.io. * ;
 import  java.util.Scanner ;
 
@@ -33,7 +33,7 @@ public  class  CharFilter {
 
     public  static  void  filterFile ( String  inFileName , String  outFileName , String  filter ) {
         try (FileReader fileReader = new FileReader(inFileName)) {
-            try (Scanner scanner = new scanner(fileReader)) {
+            try (Scanner scanner = new Scanner(fileReader)) {
                 FileWriter fileWriter = new FileWriter(outFileName);
                 try {
                     while (scanner.hasNextLine()) {
