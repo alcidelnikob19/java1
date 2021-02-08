@@ -1,7 +1,7 @@
 package ru.progwards.java1.lessons.io1;
 
-import ru.progwards.java1.lessons.arrays.DIntArray;
-
+//import ru.progwards.java1.lessons.arrays.DIntArray;
+import  java.util.*;
 import  java.io. * ;
 import  java.util.Scanner ;
 
