@@ -72,7 +72,7 @@ public class Coder
     {
 //=====
         char[] code = new char[256];
-        Arrays.fill(code, '*');
+        Arrays.fill(code, ' ');
 
         for (int i = 48; i < 58; i++)
             code[i] = (char) (i + 16);
