@@ -23,7 +23,7 @@ public  class  CharFilter {
     private static  String  deleteFilterChars ( String  string , String  filter ) {
         StringBuilder stringBuilder =  new  StringBuilder ();
         int l = string.length();
-        DIntArray stringBuilder1;
+       // DIntArray stringBuilder1;
         for (int i = 0; i < l; i ++ ) {
            if (filter.indexOf (string.charAt (i)) <  0 )
             stringBuilder.append(Boolean.parseBoolean(String.valueOf(string. charAt (i))));
