@@ -21,14 +21,14 @@ public  class  CharFilter {
 
 
     private static  String  deleteFilterChars ( String  string , String  filter ) {
-        StringBuilder StringBuilder =  new  StringBuilder ();
+        StringBuilder stringBuilder =  new  StringBuilder ();
         int l = string.length();
-        DIntArray stringBuilder;
+        DIntArray stringBuilder1;
         for (int i = 0; i < l; i ++ ) {
            if (filter.indexOf (string.charAt (i)) <  0 )
-            StringBuilder.append(string. charAt (i));
+            stringBuilder.append(Boolean.parseBoolean(String.valueOf(string. charAt (i))));
         }
-        return StringBuilder.toString();
+        return stringBuilder.toString();
     }
 
     public  static  void  filterFile ( String  inFileName , String  outFileName , String  filter ) {
@@ -52,7 +52,8 @@ public  class  CharFilter {
     }
 
     public  static  void  main ( String [] args ) {
-        filterFile ( " D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\CharFile.txt " ,
-                " D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\CharFileO.txt " , " - ,. () " );
+       // D:\Java\PR\src\ru\progwards\java1\lessons\io1\CharFile.txt
+        filterFile ( "D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\CharFile.txt" ,
+                "D:\\Java\\PR\\src\\ru\\progwards\\java1\\lessons\\io1\\CharFileO.txt" , " - ,. () " );
     }
 }
